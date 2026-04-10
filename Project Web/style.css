@@ -1,0 +1,314 @@
+body {
+  background-color: #1C1B1B;
+  color: #FFFFFF;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#search-form {
+  position: relative;
+}
+
+#searchResults {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+header {
+  background-color: #1C1B1B;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  margin: 0.5rem 0 0 0.5rem; 
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.fullwidth-banner {
+  position: relative; 
+  width: 100vw;
+  height: 300px;
+  background-image: url('Images/gettyimages-123396082_alberteinstein1-2-1944_popperfoto_gross.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Tekst boven de image */
+.quote-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-style: italic;
+  max-width: 90vw;
+  text-align: center;
+  padding: 0 1rem;
+  user-select: none;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7); 
+}
+
+
+.fullwidth-banner {
+  width: 100vw;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  background-image: url('Images/gettyimages-123396082_alberteinstein1-2-1944_popperfoto_gross.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+}
+
+.fullwidth-banner img {
+  width: 100vw;
+  height: 200px; 
+  object-fit: cover;
+  display: block;
+}
+
+/* Donkere fade boven en onder de image */
+.fullwidth-banner::before, .fullwidth-banner::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 2;
+}
+
+.fullwidth-banner::before {
+  top: 0;
+  background: linear-gradient(to bottom, #1C1B1B, transparent);
+}
+
+.fullwidth-banner::after {
+  bottom: 0;
+  background: linear-gradient(to top, #1C1B1B, transparent);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body.document-page {
+  background: url('images/backgroundlong.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+main.doc-flex {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.doc-sidebar p {
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.nav-link {
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.doc-sidebar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+
+  width: 250px;
+  height: 70vh;
+  background-color: #1C1B1B;
+  padding: 30px 20px;
+  border-radius: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.doc-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.doc-sidebar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.doc-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.doc-main-content {
+  flex-grow: 1;
+  z-index: 1;
+}
+
+
+/* Content erboven */
+.content {
+  position: relative;
+  z-index: 1;
+  color: white; /* Zorg dat de tekst zichtbaar blijft */
+}
+
+.logo-img {
+  height: auto;
+  max-height: 60px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  margin-right: 20px; 
+}
+
+.logo-wrapper {
+  margin-right: 10px;
+}
+
+.logo-placeholder {
+  width: 60px;
+  height: 60px;
+  background-color: #AF9174;
+  border-radius: 50%;
+  margin-right: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+nav a {
+  color: #BAB1A4;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: color 0.2s, background-color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #1C1B1B;
+  background-color: #AF9174;
+}
+
+section {
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #1C1B1B;
+  box-shadow: 0 0 15px rgba(175, 145, 116, 0.3);
+  color: #FFFFFF;
+}
+
+.fullwidth-photo {
+  width: 100vw;
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.card {
+  background-color: #1C1B1B;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15); /* dunne witte outline */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(175, 145, 116, 0.4);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(28, 27, 27, 0.7);
+}
+
+
+.btn-custom {
+  background-color: #AF9174;
+  color: #1C1B1B;
+}
+.btn-custom:hover {
+  background-color: #BAB1A4;
+  color: #1C1B1B;
+}
+
+h2 {
+  color: #AF9174;
+}
+
+
+a {
+  color: #AF9174;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #BAB1A4;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.list-group-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #1C1B1B;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.list-group-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: #292828; /* optioneel iets lichter op hover */
+}
+
+
+footer {
+  background-color: #1C1B1B;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  border-radius: 0;
+  color: #FFFFFF;
+  box-shadow: 0 -4px 12px rgba(175, 145, 116, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15); /* witte outline */
+}
