@@ -1,3 +1,11 @@
+$(document).ready(function(){
+    console.log("DOM volledig geladen...");
+
+    $("#discord-btn").click(function() {
+      window.open("https://discord.gg/JxUmW5kc", "_blank");
+    });
+});
+
 let documents = [];
 
 // Load JSON één keer
@@ -92,11 +100,3 @@ function init() {
     `;
   }
 }
-
-$(document).ready(function(){
-    console.log("DOM volledig geladen...");
-
-    $("#discord-btn").click(function() {
-      window.open("https://discord.gg/JxUmW5kc", "_blank");
-    });
-});

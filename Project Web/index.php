@@ -40,7 +40,7 @@
   </header>
   
   <main>
-    <!-- Eerste container met "About the Game" -->
+    <!-- eerste container -->
     <div class="container py-5">
       <section id="about">
         <h2>About the Game</h2>
@@ -48,14 +48,14 @@
       </section>
     </div>
     
-    <!-- Fullwidth banner buiten container -->
+    <!-- achtergrond met quote -->
     <div class="fullwidth-banner">
       <div class="quote-overlay">
         <p>“If we knew what we are doing, it wouldn’t be called research.” - Albert Einstein </p>
       </div>
     </div>
     
-    <!-- Tweede container met Features & Discord -->
+    <!-- tweede container -->
     <div class="container py-5">
     <section id="features">
       <h2 class="mb-4">Why Aurora Research Corporation?</h2>
@@ -84,13 +84,13 @@
     <section id="discord" class="mt-5">
       <h2>Join our Discord</h2>
       <p>Stay up-to-date with the latest updates and join the community, events are hosted regulary.</p>
-      <a href="#" class="btn btn-outline-light mt-3" id="discord-btn">Join Now</a>
+      <a class="btn btn-outline-light mt-3" id="discord-btn">Join Now</a>
     </section>
   </div>
     
   <div class="fullwidth-banner">
     <div class="quote-overlay">
-      <p>“Another quote for another day.” - Your mother</p>
+      <p>“A community isn't souly a group of people, it should idealy be more of a family.” - YoloTrolo_</p>
     </div>
   </div>
     
@@ -103,7 +103,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="jouw-script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
