@@ -88,7 +88,7 @@
     </section>
   </div>
     
-  <div class="fullwidth-banner">
+  <div class="fullwidth-banner2">
     <div class="quote-overlay">
       <p>“A community isn't souly a group of people, it should idealy be more of a family.” - YoloTrolo_</p>
     </div>

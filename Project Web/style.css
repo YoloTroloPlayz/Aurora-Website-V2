@@ -42,6 +42,18 @@ header {
   overflow: hidden;
 }
 
+.fullwidth-banner2 {
+  position: relative; 
+  width: 100vw;
+  height: 300px;
+  background-image: url('Images/Firefly\ 20260414000535.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
 /* Tekst boven de image */
 .quote-overlay {
   position: absolute;
