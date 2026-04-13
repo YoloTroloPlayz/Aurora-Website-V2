@@ -92,3 +92,11 @@ function init() {
     `;
   }
 }
+
+$(document).ready(function(){
+    console.log("DOM volledig geladen...");
+
+    $("#discord-btn").click(function() {
+      window.open("https://discord.gg/JxUmW5kc", "_blank");
+    });
+});

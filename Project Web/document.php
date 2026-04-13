@@ -9,7 +9,6 @@
   <link href="styles.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="script.js"></script>
   <link href="style.css" rel="stylesheet" />
 </head>
 
@@ -61,9 +60,12 @@
 
 
   <footer>
-    <p>&copy; 2025 Game Name. All rights reserved.</p>
+    <p>&copy; 2025 Aurora Research Corporation. All rights reserved. YoloTrolo_</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="jouw-script.js"></script>
 </body>
 
 </html>

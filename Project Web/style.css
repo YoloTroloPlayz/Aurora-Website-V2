@@ -312,3 +312,66 @@ footer {
   box-shadow: 0 -4px 12px rgba(175, 145, 116, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.15); /* witte outline */
 }
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+}
+
+.login-box {
+  background-color: #1C1B1B;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(175, 145, 116, 0.3);
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+}
+
+.login-box label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #BAB1A4;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.2rem;
+  background-color: #292828;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #AF9174;
+  color: #1C1B1B;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-box button:hover {
+  background-color: #BAB1A4;
+}
+
+.foutmelding {
+  background-color: rgba(255, 0, 0, 0.15);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+}

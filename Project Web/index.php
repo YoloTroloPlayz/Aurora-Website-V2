@@ -10,8 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
   <link href="style.css" rel="stylesheet" />
   <?php
     session_start();
@@ -32,9 +30,10 @@
 
     
     <nav>
-    <a href="./mainARC.html">Home</a>
-    <a href="index.html#features">Features</a>
-    <a href="index.html#discord">
+    <a href="./index.php">Home</a>
+    <a href="index.php#features">Features</a>
+    <a href="./login.php">Login</a>
+    <a href="index.php#discord">
       <i class="fab fa-discord me-1"></i>Discord
     </a>
     </nav>
@@ -85,7 +84,7 @@
     <section id="discord" class="mt-5">
       <h2>Join our Discord</h2>
       <p>Stay up-to-date with the latest updates and join the community, events are hosted regulary.</p>
-      <a href="#" class="btn btn-outline-light mt-3">Join Now</a>
+      <a href="#" class="btn btn-outline-light mt-3" id="discord-btn">Join Now</a>
     </section>
   </div>
     
@@ -102,6 +101,9 @@
     <p>&copy; 2025 Aurora Research Corporation. All rights reserved. YoloTrolo_</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="jouw-script.js"></script>
 </body>
 
 </html>
