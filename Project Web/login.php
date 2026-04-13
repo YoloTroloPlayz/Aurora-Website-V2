@@ -39,8 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body class="login-page">
     <header class="container d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center logo-wrapper">
             <img src="images/auroralogo.png" alt="Aurora Logo" class="logo-img" />
