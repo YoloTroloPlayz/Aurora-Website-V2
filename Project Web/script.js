@@ -63,7 +63,7 @@ function init() {
         li.style.cursor = 'pointer';
 
         li.addEventListener('click', () => {
-          window.location.href = `document.html?id=${doc.id}`;
+          window.location.href = `document.php?id=${doc.id}`;
         });
 
         resultsList.appendChild(li);

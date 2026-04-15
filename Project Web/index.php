@@ -23,16 +23,22 @@
     <img src="images/auroralogo.png" alt="Aurora Logo" class="logo-img" />
     <h1 class="mb-0">Aurora Research Corporation</h1>
   </div>
+  
   <form class="d-flex" role="search" id="search-form">
     <input class="form-control" type="search" id="searchInput" placeholder="Search documents..." aria-label="Search">
     <ul id="searchResults" class="list-group position-absolute mt-5 w-50 z-3"></ul>
   </form>
 
-    
     <nav>
     <a href="./index.php">Home</a>
     <a href="index.php#features">Features</a>
-    <a href="./login.php">Login</a>
+    <?php
+      if (isset($_SESSION['gebruikersnaam'])) {
+        echo '<a href="logout.php">Logout</a>';
+      } else {
+        echo '<a href="login.php">Login</a>';
+      }
+    ?>
     <a href="index.php#discord">
       <i class="fab fa-discord me-1"></i>Discord
     </a>

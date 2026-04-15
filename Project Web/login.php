@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-if (isset($_SESSION['gebruiker'])) {
-    header("Location: secret.php");
-    exit();
-}
-
 $fout = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -21,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($wachtwoord_db && md5($wachtwoord) === $wachtwoord_db) {
         $_SESSION['gebruiker'] = $gebruikersnaam;
-        header("Location: secret.php");
+        header("Location: index.php");
         exit();
     } else {
         $fout = "Ongeldige gebruikersnaam of wachtwoord.";

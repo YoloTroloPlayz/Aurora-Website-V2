@@ -20,11 +20,19 @@
         </div>
 
         <nav>
-          <a href="./mainARC.html">Home</a>
-          <a href="index.html#features">Features</a>
-          <a href="index.html#discord">
+          <a href="./index.php">Home</a>
+          <a href="index.php#features">Features</a>
+          <a href="index.php#discord">
             <i class="fab fa-discord me-1"></i>Discord
           </a>
+          <?php
+            session_start();
+            if (isset($_SESSION['gebruikersnaam'])) {
+              echo '<a href="logout.php">Logout</a>';
+            } else {
+              echo '<a href="login.php">Login</a>';
+            }
+          ?>
         </nav>
 
         </header>

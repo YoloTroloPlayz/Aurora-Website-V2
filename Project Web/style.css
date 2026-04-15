@@ -55,7 +55,6 @@ header {
 }
 .login-page {
   position: relative; 
-
   background-image: url('Images/loginachtergrond.png');
   background-size: cover;
   background-position: center;
