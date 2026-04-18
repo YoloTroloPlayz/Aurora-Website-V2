@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roblox Game Community</title>
+  <title>ARC - Home</title>
+  <link rel="icon" href="./Images/auroralogo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
@@ -13,7 +14,6 @@
   <link href="style.css" rel="stylesheet" />
   <?php
     session_start();
-
   ?>
 </head>
 
@@ -93,10 +93,32 @@
       <a class="btn btn-outline-light mt-3" id="discord-btn">Join Now</a>
     </section>
   </div>
-    
+
   <div class="fullwidth-banner2">
     <div class="quote-overlay">
       <p>“A community isn't souly a group of people, it should idealy be more of a family.” - YoloTrolo_</p>
+    </div>
+  </div>
+
+  <!-- derde container -->
+  <div class="container py-5">
+
+    <section id="features" class="mt-5">
+      <h2>Our documents</h2>
+      <p>We keep our research information neatly sorted in documents. Redaction can occur when account does not have the required authorization level.</p>
+      <a class="btn btn-outline-light mt-3" id="doc-btn">Go view documents</a>
+    </section>
+
+    <section id="features" class="mt-5">
+      <h2>Have a look at the teams</h2>
+      <p>In this research facility there are obviously departements with each their role. Best examples of these are the research departement tasked with studying found anomalies and testing. Security departement tasked with guarding the site or even the military police who keep the riots down and make sure the people follow the rules.</p>
+      <a class="btn btn-outline-light mt-3">Go view teams</a>
+    </section>
+  </div>
+    
+  <div class="fullwidth-banner3">
+    <div class="quote-overlay">
+      <p>“Somewhere, something incredible is waiting to be known” - Carl Sagan</p>
     </div>
   </div>
     

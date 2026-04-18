@@ -4,6 +4,10 @@ $(document).ready(function(){
     $("#discord-btn").click(function() {
       window.open("https://discord.gg/JxUmW5kc", "_blank");
     });
+
+    $("#doc-btn").click(function() {
+      window.open("./document.php", "_blank");
+    });
 });
 
 let documents = [];

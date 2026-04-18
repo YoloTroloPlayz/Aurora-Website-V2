@@ -53,6 +53,19 @@ header {
   background-repeat: no-repeat;
   overflow: hidden;
 }
+
+.fullwidth-banner3 {
+  position: relative; 
+  width: 100vw;
+  height: 300px;
+  background-image: url('Images/carl-sagan-in-cornell-lab.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
 .login-page {
   position: relative; 
   background-image: url('Images/loginachtergrond.png');
@@ -82,19 +95,19 @@ header {
 }
 
 
-.fullwidth-banner {
-  width: 100vw;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  background-image: url('Images/gettyimages-123396082_alberteinstein1-2-1944_popperfoto_gross.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; 
-  background-repeat: no-repeat;
-}
-
 .fullwidth-banner img {
+  width: 100vw;
+  height: 200px; 
+  object-fit: cover;
+  display: block;
+}
+.fullwidth-banner2 img {
+  width: 100vw;
+  height: 200px; 
+  object-fit: cover;
+  display: block;
+}
+.fullwidth-banner3 img {
   width: 100vw;
   height: 200px; 
   object-fit: cover;
@@ -110,13 +123,45 @@ header {
   height: 5px;
   z-index: 2;
 }
+.fullwidth-banner2::before, .fullwidth-banner2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 2;
+}
+.fullwidth-banner3::before, .fullwidth-banner3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 2;
+}
 
 .fullwidth-banner::before {
   top: 0;
   background: linear-gradient(to bottom, #1C1B1B, transparent);
 }
+.fullwidth-banner2::before {
+  top: 0;
+  background: linear-gradient(to bottom, #1C1B1B, transparent);
+}
+.fullwidth-banner3::before {
+  top: 0;
+  background: linear-gradient(to bottom, #1C1B1B, transparent);
+}
 
 .fullwidth-banner::after {
+  bottom: 0;
+  background: linear-gradient(to top, #1C1B1B, transparent);
+}
+.fullwidth-banner2::after {
+  bottom: 0;
+  background: linear-gradient(to top, #1C1B1B, transparent);
+}
+.fullwidth-banner3::after {
   bottom: 0;
   background: linear-gradient(to top, #1C1B1B, transparent);
 }
@@ -127,7 +172,7 @@ body, html {
 }
 
 body.document-page {
-  background: url('images/backgroundlong.png') no-repeat center center fixed;
+  background: url('images/loginachtergrond.png') no-repeat center center fixed;
   background-size: cover;
   position: relative;
   min-height: 100vh;
@@ -200,11 +245,11 @@ main.doc-flex {
 }
 
 
-/* Content erboven */
+/* teskst boven banners */
 .content {
   position: relative;
   z-index: 1;
-  color: white; /* Zorg dat de tekst zichtbaar blijft */
+  color: white; 
 }
 
 .logo-img {
