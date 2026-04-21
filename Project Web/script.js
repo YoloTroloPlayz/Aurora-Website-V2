@@ -10,7 +10,7 @@ $(document).ready(function(){
     });
 });
 
-let documents = [];
+/* let documents = [];
 
 // Load JSON één keer
 fetch('docs.json')
@@ -103,4 +103,4 @@ function init() {
       </iframe>
     `;
   }
-}
+} */

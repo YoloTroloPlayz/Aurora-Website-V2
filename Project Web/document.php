@@ -27,10 +27,14 @@
           </a>
           <?php
             session_start();
-            if (isset($_SESSION['gebruikersnaam'])) {
-              echo '<a href="logout.php">Logout</a>';
+            if (isset($_SESSION['gebruiker'])) {
+              echo '<a href="logout.php">Logout <span class="user">from ' . htmlspecialchars($_SESSION['gebruiker']) . '</span></a>';
             } else {
               echo '<a href="login.php">Login</a>';
+            }
+
+            if (isset($_SESSION['gebruiker'])) {
+              echo '<a href="upload.php">Upload</a>';
             }
           ?>
         </nav>

@@ -34,9 +34,13 @@
     <a href="index.php#features">Features</a>
     <?php
       if (isset($_SESSION['gebruiker'])) {
-        echo '<a href="logout.php">Logout</a>';
+        echo '<a href="logout.php">Logout <span class="user">from ' . htmlspecialchars($_SESSION['gebruiker']) . '</span></a>';
       } else {
         echo '<a href="login.php">Login</a>';
+      }
+
+      if (isset($_SESSION['gebruiker'])) {
+        echo '<a href="upload.php">Upload</a>';
       }
     ?>
     <a href="index.php#discord">
@@ -55,7 +59,7 @@
     </div>
     
     <!-- achtergrond met quote -->
-    <div class="fullwidth-banner">
+    <div class="fullwidth-banner" id="banner1">
       <div class="quote-overlay">
         <p>“If we knew what we are doing, it wouldn’t be called research.” - Albert Einstein </p>
       </div>
@@ -94,7 +98,7 @@
     </section>
   </div>
 
-  <div class="fullwidth-banner2">
+  <div class="fullwidth-banner" id="banner2">
     <div class="quote-overlay">
       <p>“A community isn't souly a group of people, it should idealy be more of a family.” - YoloTrolo_</p>
     </div>
@@ -116,7 +120,7 @@
     </section>
   </div>
     
-  <div class="fullwidth-banner3">
+  <div class="fullwidth-banner" id="banner3">
     <div class="quote-overlay">
       <p>“Somewhere, something incredible is waiting to be known” - Carl Sagan</p>
     </div>

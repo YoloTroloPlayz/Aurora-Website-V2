@@ -34,36 +34,21 @@ header {
   position: relative; 
   width: 100vw;
   height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#banner1 {
   background-image: url('Images/gettyimages-123396082_alberteinstein1-2-1944_popperfoto_gross.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  overflow: hidden;
 }
-
-.fullwidth-banner2 {
-  position: relative; 
-  width: 100vw;
-  height: 300px;
+#banner2 {
   background-image: url('Images/Firefly\ 20260414000535.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  overflow: hidden;
 }
-
-.fullwidth-banner3 {
-  position: relative; 
-  width: 100vw;
-  height: 300px;
+#banner3 {
   background-image: url('Images/carl-sagan-in-cornell-lab.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  overflow: hidden;
 }
 
 .login-page {
@@ -101,37 +86,9 @@ header {
   object-fit: cover;
   display: block;
 }
-.fullwidth-banner2 img {
-  width: 100vw;
-  height: 200px; 
-  object-fit: cover;
-  display: block;
-}
-.fullwidth-banner3 img {
-  width: 100vw;
-  height: 200px; 
-  object-fit: cover;
-  display: block;
-}
 
 /* Donkere fade boven en onder de image */
 .fullwidth-banner::before, .fullwidth-banner::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  z-index: 2;
-}
-.fullwidth-banner2::before, .fullwidth-banner2::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  z-index: 2;
-}
-.fullwidth-banner3::before, .fullwidth-banner3::after {
   content: '';
   position: absolute;
   left: 0;
@@ -283,6 +240,14 @@ nav a {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.user {
+  color: #AF9174;
+  font-weight: normal;
 }
 
 nav a:hover {
