@@ -57,3 +57,22 @@ function showFiles() {
     fileList.innerHTML += `<p>${file.name}</p>`;
   }
 }
+
+
+// code for document.php en niet upload.php
+fetch('get_files.php')
+    .then(res => res.json())
+    .then(files => {
+        const list = document.getElementById('docList');
+        files.forEach(file => {
+            list.innerHTML += `<li class="nav-item">
+                <a href="#" class="nav-link text-white" onclick="loadPDF('${file.path}'); return false;">
+                    ${file.filename}
+                </a>
+            </li>`;
+        });
+    });
+
+function loadPDF(path) {
+    document.getElementById('pdfViewer').src = path;
+}

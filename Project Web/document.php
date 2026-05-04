@@ -14,70 +14,71 @@
 
 <body class="document-page">
     <header class="container d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center logo-wrapper">
-          <img src="images/aurora.png" alt="Aurora Logo" class="logo-img" />
-          <h1 class="mb-0">Aurora Research Corporation</h1>
-        </div>
+      <div class="d-flex align-items-center logo-wrapper">
+        <img src="images/aurora.png" alt="Aurora Logo" class="logo-img" />
+        <h1 class="mb-0">Aurora Research Corporation</h1>
+      </div>
 
-        <nav>
-          <a href="./index.php">Home</a>
-          <a href="index.php#features">Features</a>
-          <a href="index.php#discord">
-            <i class="fab fa-discord me-1"></i>Discord
-          </a>
-          <?php
-            session_start();
-            if (isset($_SESSION['gebruiker'])) {
-              echo '<a href="logout.php">Logout <span class="user">from ' . htmlspecialchars($_SESSION['gebruiker']) . '</span></a>';
-            } else {
-              echo '<a href="login.php">Login</a>';
-            }
+      <nav>
+        <a href="./index.php">Home</a>
+        <a href="index.php#features">Features</a>
+        <a href="index.php#discord">
+          <i class="fab fa-discord me-1"></i>Discord
+        </a>
+        <?php
+          session_start();
+          if (isset($_SESSION['gebruiker'])) {
+            echo '<a href="logout.php">Logout <span class="user">from ' . htmlspecialchars($_SESSION['gebruiker']) . '</span></a>';
+          } else {
+            echo '<a href="login.php">Login</a>';
+          }
 
-            if (isset($_SESSION['gebruiker'])) {
-              echo '<a href="upload.php">Upload</a>';
-            }
-          ?>
-        </nav>
+          if (isset($_SESSION['gebruiker'])) {
+            echo '<a href="upload.php">Upload</a>';
+          }
+        ?>
+      </nav>
+    </header>
 
-        </header>
     <div class="overlay"></div>
     <main class="doc-flex">
-      <!-- Sidebar -->
-        <aside class="doc-sidebar p-3">
-          <input type="text" class="form-control mb-4" id="searchInput" placeholder="Search documents...">
 
-          <div class="popular-searches mb-3 text-center">
-            <p class="text-white mb-2 fw-semibold">Some popular searches:</p>
-          </div>
+    <!-- Sidebar -->
+    <aside class="doc-sidebar p-3">
+      <input type="text" class="form-control mb-4" id="searchInput" placeholder="Search documents...">
+      <ul class="nav flex-column" id="docList">
+        <?php
+          $conn = mysqli_connect("localhost", "root", "", "login_systeem");
+          $result = mysqli_query($conn, "SELECT id, filename, path FROM files LIMIT 5");
+          while ($row = mysqli_fetch_assoc($result)) {
+            echo '<li class="nav-item">
+              <a href="#" class="nav-link text-white" onclick="loadPDF(\'' . $row['path'] . '\'); return false;">
+                ' . htmlspecialchars($row['filename']) . '
+              </a>
+            </li>';
+          }
+        ?>
+      </ul>
+    </aside>
 
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a href="document.html?id=doc-001" class="nav-link text-white">AID-001 Containment</a>
-            </li>
-            <li class="nav-item">
-              <a href="document.html?id=doc-013" class="nav-link text-white">AID-013 IBDP</a>
-            </li>
-          </ul>
-        </aside>
-
-
-      <!-- Document content -->
-      <div class="doc-main-content container py-5">
-        <section class="mt-4">
-          <h2 id="doc-title" class="mb-4">Loading...</h2>
-          <div id="doc-content"></div>
-        </section>
+      <!-- PDF viewer -->
+      <div id="pdfContainer" class="doc-main-content container py-5">
+        <iframe id="pdfViewer" src="" style="width:100%; height:80vh; border:none;"></iframe>
       </div>
     </main>
-
 
   <footer>
     <p>&copy; 2025 Aurora Research Corporation. All rights reserved. YoloTrolo_</p>
   </footer>
 
+   <script>
+    function loadPDF(path) {
+      document.getElementById('pdfViewer').src = path;
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="jouw-script.js"></script>
+  <script src="upload.js"></script>
 </body>
 
 </html>

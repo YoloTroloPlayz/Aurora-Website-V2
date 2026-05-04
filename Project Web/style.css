@@ -410,3 +410,8 @@ footer {
   margin-bottom: 1rem;
   color: #ff6b6b;
 }
+
+#pdfContainer {
+  max-width: 80%;
+  margin-left: auto;
+}
