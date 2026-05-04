@@ -15,7 +15,7 @@
 <body class="document-page">
     <header class="container d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center logo-wrapper">
-        <img src="images/aurora.png" alt="Aurora Logo" class="logo-img" />
+        <img src="Images/auroralogo.png" alt="Aurora Logo" class="logo-img" />
         <h1 class="mb-0">Aurora Research Corporation</h1>
       </div>
 
