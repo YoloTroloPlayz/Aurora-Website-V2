@@ -25,7 +25,15 @@
   </div>
 
   <form class="d-flex" role="search" id="search-form">
-    <input class="form-control" type="search" id="searchInput" placeholder="Search documents..." aria-label="Search">
+    <!--<input class="form-control" type="search" id="searchInput" placeholder="Search documents..." aria-label="Search">-->
+    <form action="document.php" method="GET">
+    <input class="form-control"
+           type="search"
+           id="searchInput"
+           name="q"
+           placeholder="Search documents..."
+           aria-label="Search">
+    </form>
     <ul id="searchResults" class="list-group position-absolute mt-5 w-50 z-3"></ul>
   </form>
 

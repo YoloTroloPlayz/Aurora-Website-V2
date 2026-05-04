@@ -37,47 +37,18 @@ uploadBtn.addEventListener("click", () => {
   }
 
   fetch("upload.php", {
-    method: "POST",
-    body: formData
+      method: "POST",
+      body: formData
   })
   .then(res => res.text())
   .then(data => {
-    status.innerHTML = data;
+      window.location.href = "index.php";
   });
 });
 
 function isValidPDF(file) {
   return file.type === "application/pdf";
 }
-
-uploadBtn.addEventListener("click", () => {
-  if (selectedFiles.length === 0) {
-    status.innerText = "Geen files geselecteerd";
-    return;
-  }
-
-  for (let file of selectedFiles) {
-    if (!isValidPDF(file)) {
-      status.innerText = "Alleen PDF bestanden toegestaan!";
-      return;
-    }
-  }
-
-  const formData = new FormData();
-
-  for (let i = 0; i < selectedFiles.length; i++) {
-    formData.append("files[]", selectedFiles[i]);
-  }
-
-  fetch("upload.php", {
-    method: "POST",
-    body: formData
-  })
-  .then(res => res.text())
-  .then(data => {
-    status.innerHTML = data;
-  });
-});
 
 function showFiles() {
   fileList.innerHTML = "";

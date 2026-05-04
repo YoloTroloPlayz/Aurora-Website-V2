@@ -42,13 +42,13 @@ header {
 }
 
 #banner1 {
-  background-image: url('Images/gettyimages-123396082_alberteinstein1-2-1944_popperfoto_gross.jpg');
+  background-image: url('Images/albert-einstein-pictures-1920-x-1080-1he1l0164zv5bb0x.jpg');
 }
 #banner2 {
   background-image: url('Images/Firefly\ 20260414000535.png');
 }
 #banner3 {
-  background-image: url('Images/carl-sagan-in-cornell-lab.jpg');
+  background-image: url('Images/Firefly.jpg');
 }
 
 .login-page {
@@ -58,7 +58,6 @@ header {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  overflow: hidden;
 }
 
 
@@ -361,6 +360,10 @@ footer {
   width: 100%;
   max-width: 400px;
   box-shadow: 0 0 15px rgba(158, 131, 105, 0.441);
+}
+
+.login-box p {
+  padding-top: 0.5rem;
 }
 
 .login-box h2 {

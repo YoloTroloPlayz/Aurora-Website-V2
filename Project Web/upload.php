@@ -5,39 +5,34 @@ if (!isset($_SESSION['gebruiker'])) {
     exit();
 }
 
-/* $uploadDir = "uploads/";
+//lokale map voor uploads
+$uploadDir = "uploads/";
 
 if (!is_dir($uploadDir)) {
     mkdir($uploadDir, 0777, true);
 }
 
-$conn = new mysqli("localhost", "root", "", "yourdb");
+$conn = mysqli_connect("localhost", "root", "", "login_systeem");
 
-foreach ($_FILES["files"]["tmp_name"] as $key => $tmp_name) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES["files"])) {
+    foreach ($_FILES["files"]["tmp_name"] as $key => $tmp_name) {
+        $originalName = $_FILES["files"]["name"][$key];
+        $fileType = $_FILES["files"]["type"][$key];
 
-    $originalName = $_FILES["files"]["name"][$key];
-    $fileType = mime_content_type($tmp_name);
+        if ($fileType !== "application/pdf") continue;
 
-    // 🔒 CHECK: alleen PDF
-    if ($fileType !== "application/pdf") {
-        echo "❌ Alleen PDF toegestaan: " . $originalName . "<br>";
-        continue;
+        $name = uniqid() . ".pdf";
+        $targetFile = $uploadDir . $name;
+
+        if (move_uploaded_file($tmp_name, $targetFile)) {
+            $stmt = $conn->prepare("INSERT INTO files (filename, path) VALUES (?, ?)");
+            $stmt->bind_param("ss", $originalName, $targetFile);
+            $stmt->execute();
+        }
     }
-
-    $name = uniqid() . ".pdf";
-    $targetFile = $uploadDir . $name;
-
-    if (move_uploaded_file($tmp_name, $targetFile)) {
-
-        $stmt = $conn->prepare("INSERT INTO files (filename, path) VALUES (?, ?)");
-        $stmt->bind_param("ss", $originalName, $targetFile);
-        $stmt->execute();
-
-        echo "✅ Uploaded: " . $originalName . "<br>";
-    } else {
-        echo "❌ Error: " . $originalName . "<br>";
-    }
-} */
+    header("Location: index.php");
+    exit();
+}
 
 ?>
 <!DOCTYPE html>
@@ -84,23 +79,27 @@ foreach ($_FILES["files"]["tmp_name"] as $key => $tmp_name) {
         </nav>
     </header>
 
-    <div class="upload-container">
+    <div class="login-wrapper">
+        <div class="login-box">
 
-    <h2>Upload files</h2>
+        <h2>Upload files</h2>
 
-    <div id="dropZone">
-        <p>Sleep bestanden hier of</p>
-        <button id="selectBtn">Selecteer bestanden</button>
-    </div>
+        <div id="dropZone">
+            <p>Drag files here or</p>
+            <button id="selectBtn">Select files</button>
+        </div>
 
-    <input type="file" id="fileInput" multiple hidden>
+        <input type="file" id="fileInput" multiple hidden>
 
-    <div id="fileList"></div>
+        <div id="fileList"></div>
 
-    <button id="uploadBtn">Upload</button>
+        <p> Only PDF-files allowed </p>
 
-    <div id="status"></div>
+        <button id="uploadBtn">Upload</button>
 
+        <div id="status"></div>
+
+        </div>
     </div>
 
     <script src="upload.js"></script>
