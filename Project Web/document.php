@@ -43,23 +43,11 @@
     <div class="overlay"></div>
     <main class="doc-flex">
 
-    <!-- Sidebar -->
-    <aside class="doc-sidebar p-3">
-      <input type="text" class="form-control mb-4" id="searchInput" placeholder="Search documents...">
-      <ul class="nav flex-column" id="docList">
-        <?php
-          $conn = mysqli_connect("localhost", "root", "", "login_systeem");
-          $result = mysqli_query($conn, "SELECT id, filename, path FROM files LIMIT 5");
-          while ($row = mysqli_fetch_assoc($result)) {
-            echo '<li class="nav-item">
-              <a href="#" class="nav-link text-white" onclick="loadPDF(\'' . $row['path'] . '\'); return false;">
-                ' . htmlspecialchars($row['filename']) . '
-              </a>
-            </li>';
-          }
-        ?>
-      </ul>
-    </aside>
+      <!-- Sidebar -->
+      <aside class="doc-sidebar p-3">
+        <input type="text" class="form-control mb-4" id="searchInput" placeholder="Search documents...">
+        <ul class="nav flex-column" id="docList"></ul>
+      </aside>
 
       <!-- PDF viewer -->
       <div id="pdfContainer" class="doc-main-content container py-5">
@@ -71,7 +59,7 @@
     <p>&copy; 2025 Aurora Research Corporation. All rights reserved. YoloTrolo_</p>
   </footer>
 
-   <script>
+  <script>
     function loadPDF(path) {
       document.getElementById('pdfViewer').src = path;
     }

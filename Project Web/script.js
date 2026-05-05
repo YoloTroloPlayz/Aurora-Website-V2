@@ -12,4 +12,10 @@ $(document).ready(function(){
     $("#dept-btn").click(function() {
       window.open("./teams.php", "_self");
     });
+
+    $('#searchInput').on('keypress', function(e) {
+    if (e.key === 'Enter') {
+        $('form').submit(); // form heeft geen submit knop, dus doen de submit zelf
+    }
+});
 });

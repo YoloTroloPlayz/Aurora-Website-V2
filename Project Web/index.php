@@ -25,16 +25,13 @@
     <h1 class="mb-0">Aurora Research Corporation</h1>
   </div>
 
-  <form class="d-flex" role="search" id="search-form">
-    <!--<input class="form-control" type="search" id="searchInput" placeholder="Search documents..." aria-label="Search">-->
-    <form action="document.php" method="GET">
+  <form class="d-flex" role="search" action="document.php" method="get">
     <input class="form-control"
-           type="search"
-           id="searchInput"
-           name="q"
-           placeholder="Search documents..."
-           aria-label="Search">
-    </form>
+          type="search"
+          id="searchInput"
+          name="q"
+          placeholder="Search documents..."
+          aria-label="Search">
     <ul id="searchResults" class="list-group position-absolute mt-5 w-50 z-3"></ul>
   </form>
 
