@@ -8,4 +8,8 @@ $(document).ready(function(){
     $("#doc-btn").click(function() {
       window.open("./document.php", "_blank");
     });
+
+    $("#dept-btn").click(function() {
+      window.open("./teams.php", "_self");
+    });
 });

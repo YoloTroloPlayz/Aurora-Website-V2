@@ -7,15 +7,6 @@ body {
   overflow-x: hidden;
 }
 
-#search-form {
-  position: relative;
-}
-
-#searchResults {
-  max-height: 250px;
-  overflow-y: auto;
-}
-
 header {
   background-color: #1C1B1B;
   padding: 1.5rem;
@@ -30,96 +21,15 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.fullwidth-banner {
-  position: relative; 
-  width: 100vw;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-#banner1 {
-  background-image: url('Images/albert-einstein-pictures-1920-x-1080-1he1l0164zv5bb0x.jpg');
-}
-#banner2 {
-  background-image: url('Images/Firefly\ 20260414000535.png');
-}
-#banner3 {
-  background-image: url('Images/Firefly.jpg');
-}
-
-.login-page {
-  position: relative; 
-  background-image: url('Images/loginachtergrond.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-
-/* Tekst boven de image */
-.quote-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  color: white;
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-style: italic;
-  max-width: 90vw;
+footer {
+  background-color: #1C1B1B;
   text-align: center;
-  padding: 0 1rem;
-  user-select: none;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.7); 
-}
-
-
-.fullwidth-banner img {
-  width: 100vw;
-  height: 200px; 
-  object-fit: cover;
-  display: block;
-}
-
-/* Donkere fade boven en onder de image */
-.fullwidth-banner::before, .fullwidth-banner::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  z-index: 2;
-}
-
-.fullwidth-banner::before {
-  top: 0;
-  background: linear-gradient(to bottom, #1C1B1B, transparent);
-}
-.fullwidth-banner2::before {
-  top: 0;
-  background: linear-gradient(to bottom, #1C1B1B, transparent);
-}
-.fullwidth-banner3::before {
-  top: 0;
-  background: linear-gradient(to bottom, #1C1B1B, transparent);
-}
-
-.fullwidth-banner::after {
-  bottom: 0;
-  background: linear-gradient(to top, #1C1B1B, transparent);
-}
-.fullwidth-banner2::after {
-  bottom: 0;
-  background: linear-gradient(to top, #1C1B1B, transparent);
-}
-.fullwidth-banner3::after {
-  bottom: 0;
-  background: linear-gradient(to top, #1C1B1B, transparent);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  border-radius: 0;
+  color: #FFFFFF;
+  box-shadow: 0 -4px 12px rgba(175, 145, 116, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15); /* witte outline */
 }
 
 body, html {
@@ -135,13 +45,36 @@ body.document-page {
   color: white;
 }
 
-.overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 0;
+h2 {
+  color: #AF9174;
+}
+
+a {
+  color: #AF9174;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #BAB1A4;
+}
+
+/* searchbar */
+#search-form {
+  position: relative;
+}
+
+#searchResults {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.login-page {
+  position: relative; 
+  background-image: url('Images/loginachtergrond.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 main.doc-flex {
@@ -151,6 +84,7 @@ main.doc-flex {
   min-height: 100vh;
 }
 
+/* alles qua sidebar */
 .doc-sidebar p {
   font-size: 0.95rem;
   color: #ffffff;
@@ -200,14 +134,7 @@ main.doc-flex {
   z-index: 1;
 }
 
-
-/* teskst boven banners */
-.content {
-  position: relative;
-  z-index: 1;
-  color: white; 
-}
-
+/* logo */
 .logo-img {
   height: auto;
   max-height: 60px;
@@ -300,20 +227,6 @@ section {
   color: #1C1B1B;
 }
 
-h2 {
-  color: #AF9174;
-}
-
-
-a {
-  color: #AF9174;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: #BAB1A4;
-}
-
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
@@ -332,18 +245,7 @@ a:hover {
   background-color: #292828; /* optioneel iets lichter op hover */
 }
 
-
-footer {
-  background-color: #1C1B1B;
-  text-align: center;
-  padding: 2rem 0;
-  margin-top: 4rem;
-  border-radius: 0;
-  color: #FFFFFF;
-  box-shadow: 0 -4px 12px rgba(175, 145, 116, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.15); /* witte outline */
-}
-
+/* login pagina */
 .login-wrapper {
   display: flex;
   justify-content: center;
@@ -402,6 +304,7 @@ footer {
   background-color: #BAB1A4;
 }
 
+/* document pagina */
 .foutmelding {
   background-color: rgba(255, 0, 0, 0.15);
   border: 1px solid rgba(255, 0, 0, 0.3);

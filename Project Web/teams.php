@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARC - Home</title>
+  <title>ARC - Teams</title>
   <link rel="icon" href="./Images/auroralogo.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
@@ -59,81 +59,71 @@
   </header>
   
   <main>
+    <!-- teamnaam 1 -->
+    <div class="fullwidth-banner" id="banner4">
+      <div class="quote-overlay">
+        <p>Scientific Departement</p>
+      </div>
+    </div>
     <!-- eerste container -->
     <div class="container py-5">
       <section id="about">
-        <h2>About the Game</h2>
         <p>The Aurora Research Corporation is an organization dedicated to the exploration and understanding of objects that defy all known laws of natural science. Funded by the British government and various scientific institutions, the corporation aligns itself intending to protect and better humanity.</p>
       </section>
     </div>
     
-    <!-- achtergrond met quote -->
-    <div class="fullwidth-banner" id="banner1">
+    <!-- teamnaam 2 -->
+    <div class="fullwidth-banner" id="banner5">
       <div class="quote-overlay">
-        <p>“If we knew what we are doing, it wouldn’t be called research.” - Albert Einstein </p>
+        <p>Security Departement</p>
       </div>
     </div>
-    
     <!-- tweede container -->
     <div class="container py-5">
-    <section id="features">
-      <h2 class="mb-4">Why Aurora Research Corporation?</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card p-3">
-            <h5>The paranormal</h5>
-            <p>We were heavily inspired by the SCP foundation but we wanted to take a different approuch</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-3">
-            <h5>Community teams</h5>
-            <p>Unlike other games where you unlock teams, here you will have to join them in the Discord, Bigger events are hosted and your team will be called for action!</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-3">
-            <h5>The Cold War</h5>
-            <p>The game is set in the cold war, which makes for a older look. In this way our game stands out even more.</p>
-          </div>
-        </div>
+      <section id="about">
+        <p>The Aurora Research Corporation is an organization dedicated to the exploration and understanding of objects that defy all known laws of natural science. Funded by the British government and various scientific institutions, the corporation aligns itself intending to protect and better humanity.</p>
+      </section>
+    </div>
+
+    <!-- teamnaam 3 -->
+    <div class="fullwidth-banner" id="banner6">
+      <div class="quote-overlay">
+        <p>Military Police</p>
       </div>
-    </section>
-
-    <section id="discord" class="mt-5">
-      <h2>Join our Discord</h2>
-      <p>Stay up-to-date with the latest updates and join the community, events are hosted regulary.</p>
-      <a class="btn btn-outline-light mt-3" id="discord-btn">Join Now</a>
-    </section>
-  </div>
-
-  <div class="fullwidth-banner" id="banner2">
-    <div class="quote-overlay">
-      <p>“A community isn't souly a group of people, it should idealy be more of a family.” - YoloTrolo_</p>
     </div>
-  </div>
+    <!-- derde container -->
+    <div class="container py-5">
+      <section id="about">
+        <p>The Aurora Research Corporation is an organization dedicated to the exploration and understanding of objects that defy all known laws of natural science. Funded by the British government and various scientific institutions, the corporation aligns itself intending to protect and better humanity.</p>
+      </section>
+    </div>
 
-  <!-- derde container -->
-  <div class="container py-5">
+    <!-- teamnaam 4 -->
+    <div class="fullwidth-banner" id="banner7">
+      <div class="quote-overlay">
+        <p>Engineering Department</p>
+      </div>
+    </div>
+    <!-- vierde container -->
+    <div class="container py-5">
+      <section id="about">
+        <p>The Aurora Research Corporation is an organization dedicated to the exploration and understanding of objects that defy all known laws of natural science. Funded by the British government and various scientific institutions, the corporation aligns itself intending to protect and better humanity.</p>
+      </section>
+    </div>
 
-    <section id="features" class="mt-5">
-      <h2>Our documents</h2>
-      <p>We keep our research information neatly sorted in documents. Redaction can occur when account does not have the required authorization level.</p>
-      <a class="btn btn-outline-light mt-3" id="doc-btn">Go view documents</a>
-    </section>
-
-    <section id="features" class="mt-5">
-      <h2>Have a look at the departements</h2>
-      <p>In this research facility there are obviously departements with each their role. Best examples of these are the research departement tasked with studying found anomalies and testing. Security departement tasked with guarding the site or even the military police who keep the riots down and make sure the people follow the rules.</p>
-      <a class="btn btn-outline-light mt-3" id="dept-btn">Go view departements</a>
-    </section>
-  </div>
+    <!-- teamnaam 5 -->
+    <div class="fullwidth-banner" id="banner8">
+      <div class="quote-overlay">
+        <p>Ethics Committee</p>
+      </div>
+    </div>
+    <!-- vijfde container -->
+    <div class="container py-5">
+      <section id="about">
+        <p>The Aurora Research Corporation is an organization dedicated to the exploration and understanding of objects that defy all known laws of natural science. Funded by the British government and various scientific institutions, the corporation aligns itself intending to protect and better humanity.</p>
+      </section>
+    </div>
     
-  <div class="fullwidth-banner" id="banner3">
-    <div class="quote-overlay">
-      <p>“Somewhere, something incredible is waiting to be known” - Carl Sagan</p>
-    </div>
-  </div>
     
 </main>
 

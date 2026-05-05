@@ -1,0 +1,92 @@
+.fullwidth-banner {
+  position: relative; 
+  width: 100vw;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Tekst boven de image */
+.quote-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-style: italic;
+  max-width: 90vw;
+  text-align: center;
+  padding: 0 1rem;
+  user-select: none;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7); 
+}
+
+/* teskst boven banners */
+.content {
+  position: relative;
+  z-index: 1;
+  color: white; 
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.fullwidth-banner img {
+  width: 100vw;
+  height: 200px; 
+  object-fit: cover;
+  display: block;
+}
+
+/* Donkere fade boven en onder de image */
+.fullwidth-banner::before, .fullwidth-banner::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 2;
+}
+
+.fullwidth-banner::before {
+  top: 0;
+  background: linear-gradient(to bottom, #1C1B1B, transparent);
+}
+
+.fullwidth-banner::after {
+  bottom: 0;
+  background: linear-gradient(to top, #1C1B1B, transparent);
+}
+
+/* index pagina */
+#banner1 {
+  background-image: url('Images/albert-einstein-pictures-1920-x-1080-1he1l0164zv5bb0x.jpg');
+}
+#banner2 {
+  background-image: url('Images/Firefly\ 20260414000535.png');
+}
+#banner3 {
+  background-image: url('Images/Firefly.jpg');
+}
+
+/* Teams pagina */
+#banner4 {
+  background-image: url('Images/Firefly.jpg');
+}
+#banner5 {
+  background-image: url('Images/Firefly.jpg');
+}
+#banner6 {
+  background-image: url('Images/Firefly.jpg');
+}
