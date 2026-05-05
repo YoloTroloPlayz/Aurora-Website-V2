@@ -13,6 +13,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" />
   <link href="achtergronden.css" rel="stylesheet" />
+  <meta name="description" content="Aurora Research Corporation - Teams page">
+  <meta name="keywords" content="aurora, research, corporation, roblox, paranormal, SCP">
+  <meta name="author" content="YoloTrolo_">
+  <meta property="og:title" content="ARC - Teams">
+  <meta property="og:description" content="Departementen of the Aurora Research Corporation.">
+  <meta property="og:image" content="https://auroracorporation.be/Images/auroralogo.png">
+  <meta property="og:url" content="https://auroracorporation.be">
   <?php
     session_start();
   ?>

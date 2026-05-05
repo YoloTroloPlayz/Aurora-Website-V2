@@ -12,7 +12,7 @@ if (!is_dir($uploadDir)) {
     mkdir($uploadDir, 0777, true);
 }
 
-$conn = mysqli_connect("localhost", "root", "", "login_systeem");
+$conn = mysqli_connect("ID497499_loginsysteem.db.webhosting.be", "ID497499_loginsysteem", "IkHaatLarpers1010", "ID497499_loginsysteem");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES["files"])) {
     foreach ($_FILES["files"]["tmp_name"] as $key => $tmp_name) {
@@ -46,6 +46,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES["files"])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Aurora Research Corporation - Upload page">
+    <meta name="keywords" content="aurora, research, corporation, roblox, paranormal, SCP">
+    <meta name="author" content="YoloTrolo_">
+    <meta property="og:title" content="ARC - Upload">
+    <meta property="og:description" content="Upload page for the Aurora Research Corporation.">
+    <meta property="og:image" content="https://auroracorporation.be/Images/auroralogo.png">
+    <meta property="og:url" content="https://auroracorporation.be">
 </head>
 <body class="login-page">
     <header class="container d-flex align-items-center justify-content-between">

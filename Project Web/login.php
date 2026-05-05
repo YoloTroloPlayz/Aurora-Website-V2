@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $gebruikersnaam = trim($_POST['gebruikersnaam'] ?? '');
     $wachtwoord = trim($_POST['wachtwoord'] ?? '');
 
-    $conn = mysqli_connect("localhost", "root", "", "login_systeem");
+    $conn = mysqli_connect("ID497499_loginsysteem.db.webhosting.be", "ID497499_loginsysteem", "IkHaatLarpers1010", "ID497499_loginsysteem");
     $stmt = mysqli_prepare($conn, "SELECT wachtwoord FROM gebruikers WHERE gebruikersnaam = ?");
     mysqli_stmt_bind_param($stmt, "s", $gebruikersnaam);
     mysqli_stmt_execute($stmt);
@@ -34,6 +34,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Aurora Research Corporation - Login page">
+    <meta name="keywords" content="aurora, research, corporation, roblox, paranormal, SCP">
+    <meta name="author" content="YoloTrolo_">
+    <meta property="og:title" content="ARC - Login">
+    <meta property="og:description" content="Login page for the Aurora Research Corporation.">
+    <meta property="og:image" content="https://auroracorporation.be/Images/auroralogo.png">
+    <meta property="og:url" content="https://auroracorporation.be">
 </head>
 <body class="login-page">
     <header class="container d-flex align-items-center justify-content-between">

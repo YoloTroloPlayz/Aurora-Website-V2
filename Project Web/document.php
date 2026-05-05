@@ -10,6 +10,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" />
+  <meta name="description" content="Aurora Research Corporation - Documents">
+  <meta name="keywords" content="aurora, research, corporation, roblox, paranormal, SCP">
+  <meta name="author" content="YoloTrolo_">
+  <meta property="og:title" content="ARC - Documents">
+  <meta property="og:description" content="Lore searchmachine for the Aurora Research Corporation.">
+  <meta property="og:image" content="https://auroracorporation.be/Images/auroralogo.png">
+  <meta property="og:url" content="https://auroracorporation.be">
 </head>
 
 <body class="document-page">

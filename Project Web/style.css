@@ -38,7 +38,7 @@ body, html {
 }
 
 body.document-page {
-  background: url('images/loginachtergrond.png') no-repeat center center fixed;
+  background: url('Images/loginachtergrond.png') no-repeat center center fixed;
   background-size: cover;
   position: relative;
   min-height: 100vh;
