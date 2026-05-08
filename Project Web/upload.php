@@ -12,7 +12,7 @@ if (!is_dir($uploadDir)) {
     mkdir($uploadDir, 0777, true);
 }
 
-$conn = mysqli_connect("ID497499_loginsysteem.db.webhosting.be", "ID497499_loginsysteem", "IkHaatLarpers1010", "ID497499_loginsysteem");
+$conn = mysqli_connect("com-linweb644.srv.combell-ops.net", "ID497499_loginsysteem", "IkHaatLarpers1010", "ID497499_loginsysteem");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES["files"])) {
     foreach ($_FILES["files"]["tmp_name"] as $key => $tmp_name) {
@@ -117,6 +117,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES["files"])) {
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="jouw-script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
