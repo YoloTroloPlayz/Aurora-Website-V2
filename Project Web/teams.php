@@ -157,11 +157,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['gebruiker'])) {
 $result = mysqli_query($conn, "SELECT gebruiker, departement, tekst, datum FROM comments ORDER BY datum DESC");
 ?>
 
-<!-- Onderaan de pagina, voor de footer -->
 <div class="container py-5">
     <h3>Comments</h3>
 
-    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+    <?php while ($row = mysqli_fetch_assoc($result)): ?> <!-- tonen van alle comments uit database -->
         <div class="comment-box">
             <strong><?= htmlspecialchars($row['gebruiker']) ?></strong>
             <span class="comment-dept"><?= htmlspecialchars($row['departement']) ?></span>
@@ -170,11 +169,11 @@ $result = mysqli_query($conn, "SELECT gebruiker, departement, tekst, datum FROM 
         </div>
     <?php endwhile; ?>
 
-    <?php if (isset($_SESSION['gebruiker'])): ?>
+    <?php if (isset($_SESSION['gebruiker'])): ?> <!-- alleen comment plaatsen als je account hebt -->
         <form method="POST" class="mt-4">
             <label>Departement:</label>
             <select name="comment_dep">
-                <?php foreach ($departementen as $d): ?>
+                <?php foreach ($departementen as $d): ?> <!-- dropdown met departementen -->
                     <option value="<?= $d ?>"><?= $d ?></option>
                 <?php endforeach; ?>
             </select>
