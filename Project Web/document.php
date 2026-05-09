@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +36,6 @@
           <i class="fab fa-discord me-1"></i>Discord
         </a>
         <?php
-          session_start();
           if (isset($_SESSION['gebruiker'])) {
             echo '<a href="logout.php">Logout <span class="user">from ' . htmlspecialchars($_SESSION['gebruiker']) . '</span></a>';
           } else {

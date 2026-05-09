@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  $conn = mysqli_connect("com-linweb644.srv.combell-ops.net", "ID497499_loginsysteem", "IkHaatLarpers1010", "ID497499_loginsysteem");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +24,6 @@
   <meta property="og:description" content="Departementen of the Aurora Research Corporation.">
   <meta property="og:image" content="https://auroracorporation.be/Images/auroralogo.png">
   <meta property="og:url" content="https://auroracorporation.be">
-  <?php
-    session_start();
-  ?>
 </head>
 
 <body>
@@ -130,6 +131,58 @@
         <p>The Aurora Research Corporation is an organization dedicated to the exploration and understanding of objects that defy all known laws of natural science. Funded by the British government and various scientific institutions, the corporation aligns itself intending to protect and better humanity.</p>
       </section>
     </div>
+
+<?php
+$departementen = [
+    "Scientific Departement",
+    "Security Departement",
+    "Military Police",
+    "Engineering Department",
+    "Ethics Committee"
+];
+
+// Comment opslaan
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['gebruiker'])) {
+    $tekst = trim($_POST['tekst']);
+    $dep = $_POST['comment_dep'];
+    if (in_array($dep, $departementen)) { // validatie
+        $gebruiker = $_SESSION['gebruiker'];
+        $stmt = mysqli_prepare($conn, "INSERT INTO comments (gebruiker, departement, tekst) VALUES (?, ?, ?)");
+        mysqli_stmt_bind_param($stmt, "sss", $gebruiker, $dep, $tekst);
+        mysqli_stmt_execute($stmt);
+    }
+}
+
+// Alle comments ophalen
+$result = mysqli_query($conn, "SELECT gebruiker, departement, tekst, datum FROM comments ORDER BY datum DESC");
+?>
+
+<!-- Onderaan de pagina, voor de footer -->
+<div class="container py-5">
+    <h3>Comments</h3>
+
+    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+        <div class="comment-box">
+            <strong><?= htmlspecialchars($row['gebruiker']) ?></strong>
+            <span class="comment-dept"><?= htmlspecialchars($row['departement']) ?></span>
+            <span class="comment-date"><?= $row['datum'] ?></span>
+            <p><?= htmlspecialchars($row['tekst']) ?></p>
+        </div>
+    <?php endwhile; ?>
+
+    <?php if (isset($_SESSION['gebruiker'])): ?>
+        <form method="POST" class="mt-4">
+            <label>Departement:</label>
+            <select name="comment_dep">
+                <?php foreach ($departementen as $d): ?>
+                    <option value="<?= $d ?>"><?= $d ?></option>
+                <?php endforeach; ?>
+            </select>
+            <textarea name="tekst" placeholder="Schrijf een comment..." required></textarea>
+            <button type="submit">Plaatsen</button>
+        </form>
+    <?php endif; ?>
+</div>
     
     
 </main>
