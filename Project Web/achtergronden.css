@@ -90,3 +90,14 @@
 #banner6 {
   background-image: url('Images/Firefly.jpg');
 }
+
+@media (max-width: 768px) {
+  .fullwidth-banner {
+    height: 200px;
+    background-attachment: scroll; /* fixed werkt slecht op mobile */
+  }
+
+  .quote-overlay {
+    font-size: 1.3rem;
+  }
+}
