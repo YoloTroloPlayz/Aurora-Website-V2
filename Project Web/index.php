@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,9 +22,7 @@
   <meta property="og:description" content="A Corporation dedicated to the exploration and understanding of objects that defy all known laws of natural science.">
   <meta property="og:image" content="https://auroracorporation.be/Images/auroralogo.png">
   <meta property="og:url" content="https://auroracorporation.be">
-  <?php
-    session_start();
-  ?>
+
 </head>
 
 <body>

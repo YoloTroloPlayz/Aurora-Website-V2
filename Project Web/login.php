@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_stmt_bind_result($stmt, $wachtwoord_db);
     mysqli_stmt_fetch($stmt);
 
+
     if ($wachtwoord_db && password_verify($wachtwoord, $wachtwoord_db)) {
         $_SESSION['gebruiker'] = $gebruikersnaam;
         header("Location: index.php");
